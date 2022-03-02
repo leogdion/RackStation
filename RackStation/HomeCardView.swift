@@ -8,11 +8,10 @@
 
 import SwiftUI
 
-struct HomeCardView: View {
-  let design : CardDesign
+struct HomeAreaView: View {
+  let design : AreaDesign
     var body: some View {
       ZStack{
-      Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         RoundedRectangle(cornerRadius: 8.0)
           .foregroundStyle(
             .linearGradient(
@@ -21,13 +20,14 @@ struct HomeCardView: View {
             endPoint: .bottom
           )
         )
-      }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      }.frame(height: 90.0)
     }
 }
 
 struct HomeCardView_Previews: PreviewProvider {
     static var previews: some View {
-      HomeCardView(design: .init())
+      HomeAreaView(design: .init())
         .previewLayout(.fixed(width: 160, height: 90.0))
         
     }

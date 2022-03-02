@@ -13,7 +13,11 @@ struct HomeView: View {
   @ObservedObject var design : HomeViewDesign
     var body: some View {
       ScrollView{
-        CollectionView(cards: design.cards).padding()
+        LazyVStack{
+          ForEach(design.areas) { design in
+            HomeAreaView(design: design)
+          }
+        }.padding()
       }
         
     }

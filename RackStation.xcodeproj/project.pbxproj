@@ -10,10 +10,10 @@
 		B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798B9527CFC952001EB0DC /* RackStationApp.swift */; };
 		B3798B9A27CFC957001EB0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9927CFC957001EB0DC /* Assets.xcassets */; };
 		B3798B9D27CFC957001EB0DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */; };
-		B3798BAA27CFD66D001EB0DC /* CardDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BA927CFD66D001EB0DC /* CardDesign.swift */; };
-		B3798BAE27CFD68E001EB0DC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAB27CFD68E001EB0DC /* CollectionView.swift */; };
+		B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BA927CFD66D001EB0DC /* AreaDesign.swift */; };
 		B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */; };
 		B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAD27CFD68E001EB0DC /* HomeView.swift */; };
+		B3798BB227CFDFA1001EB0DC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BB127CFDFA1001EB0DC /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +21,10 @@
 		B3798B9527CFC952001EB0DC /* RackStationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackStationApp.swift; sourceTree = "<group>"; };
 		B3798B9927CFC957001EB0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B3798BA927CFD66D001EB0DC /* CardDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDesign.swift; sourceTree = "<group>"; };
-		B3798BAB27CFD68E001EB0DC /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		B3798BA927CFD66D001EB0DC /* AreaDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDesign.swift; sourceTree = "<group>"; };
 		B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		B3798BAD27CFD68E001EB0DC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B3798BB127CFDFA1001EB0DC /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +57,13 @@
 		B3798B9427CFC952001EB0DC /* RackStation */ = {
 			isa = PBXGroup;
 			children = (
+				B3798BB127CFDFA1001EB0DC /* CollectionView.swift */,
 				B3798B9527CFC952001EB0DC /* RackStationApp.swift */,
-				B3798BAB27CFD68E001EB0DC /* CollectionView.swift */,
 				B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */,
 				B3798BAD27CFD68E001EB0DC /* HomeView.swift */,
 				B3798B9927CFC957001EB0DC /* Assets.xcassets */,
 				B3798B9B27CFC957001EB0DC /* Preview Content */,
-				B3798BA927CFD66D001EB0DC /* CardDesign.swift */,
+				B3798BA927CFD66D001EB0DC /* AreaDesign.swift */,
 			);
 			path = RackStation;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */,
-				B3798BAA27CFD66D001EB0DC /* CardDesign.swift in Sources */,
+				B3798BB227CFDFA1001EB0DC /* CollectionView.swift in Sources */,
+				B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
-				B3798BAE27CFD68E001EB0DC /* CollectionView.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CardDesign : Identifiable {
+struct AreaDesign : Identifiable {
   let id : UUID = .init()
 }
