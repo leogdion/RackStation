@@ -11,7 +11,7 @@ import SwiftUI
 struct RackStationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          HomeView(design: .init())
         }
     }
 }
