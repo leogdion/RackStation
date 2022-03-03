@@ -14,8 +14,13 @@ struct HomeView: View {
     var body: some View {
       ScrollView{
         LazyVStack{
-          ForEach(design.areas) { design in
-            HomeAreaView(design: design)
+          ForEach(design.children) { design in
+            switch design.design {
+            case let .pickupStatus(design):
+              PickupStatusView(design: design)
+            case let .chips(design):
+              ChipsCollectionView(design: design)
+            }
           }
         }.padding()
       }
@@ -25,6 +30,11 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-      HomeView(design: .init())
+      HomeView(design: .init(children: [
+        .pickupStatus(.init()),
+        .chips(.init(chips: [])),
+        .chips(.init(chips: [])),
+        
+      ]))
     }
 }

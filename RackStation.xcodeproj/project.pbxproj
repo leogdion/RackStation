@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3120D4127D16564005601FA /* Designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4027D16564005601FA /* Designs.swift */; };
+		B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4227D16CE7005601FA /* PickupStatusView.swift */; };
+		B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */; };
 		B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798B9527CFC952001EB0DC /* RackStationApp.swift */; };
 		B3798B9A27CFC957001EB0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9927CFC957001EB0DC /* Assets.xcassets */; };
 		B3798B9D27CFC957001EB0DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3120D4027D16564005601FA /* Designs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designs.swift; sourceTree = "<group>"; };
+		B3120D4227D16CE7005601FA /* PickupStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupStatusView.swift; sourceTree = "<group>"; };
+		B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsCollectionView.swift; sourceTree = "<group>"; };
 		B3798B9227CFC952001EB0DC /* RackStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RackStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3798B9527CFC952001EB0DC /* RackStationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackStationApp.swift; sourceTree = "<group>"; };
 		B3798B9927CFC957001EB0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				B3798B9927CFC957001EB0DC /* Assets.xcassets */,
 				B3798B9B27CFC957001EB0DC /* Preview Content */,
 				B3798BA927CFD66D001EB0DC /* AreaDesign.swift */,
+				B3120D4027D16564005601FA /* Designs.swift */,
+				B3120D4227D16CE7005601FA /* PickupStatusView.swift */,
+				B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */,
 			);
 			path = RackStation;
 			sourceTree = "<group>";
@@ -148,9 +157,12 @@
 			files = (
 				B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */,
 				B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */,
+				B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */,
 				B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
+				B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
+				B3120D4127D16564005601FA /* Designs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
