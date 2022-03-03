@@ -20,7 +20,7 @@ struct HomeAreaView: View {
             endPoint: .bottom
           )
         )
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(design.text)
       }.frame(height: 90.0)
     }
 }

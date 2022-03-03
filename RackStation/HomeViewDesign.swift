@@ -19,6 +19,8 @@ extension Array {
 }
 
 
+
+
 class HomeViewDesign : ObservableObject {
   @Published var areas = [AreaDesign].init(factory: AreaDesign.init, count: 200)
 }

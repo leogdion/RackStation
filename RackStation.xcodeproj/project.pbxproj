@@ -13,7 +13,7 @@
 		B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BA927CFD66D001EB0DC /* AreaDesign.swift */; };
 		B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */; };
 		B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAD27CFD68E001EB0DC /* HomeView.swift */; };
-		B3798BB227CFDFA1001EB0DC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BB127CFDFA1001EB0DC /* CollectionView.swift */; };
+		B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		B3798BA927CFD66D001EB0DC /* AreaDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDesign.swift; sourceTree = "<group>"; };
 		B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		B3798BAD27CFD68E001EB0DC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		B3798BB127CFDFA1001EB0DC /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		B3798B9427CFC952001EB0DC /* RackStation */ = {
 			isa = PBXGroup;
 			children = (
-				B3798BB127CFDFA1001EB0DC /* CollectionView.swift */,
+				B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */,
 				B3798B9527CFC952001EB0DC /* RackStationApp.swift */,
 				B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */,
 				B3798BAD27CFD68E001EB0DC /* HomeView.swift */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */,
-				B3798BB227CFDFA1001EB0DC /* CollectionView.swift in Sources */,
+				B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */,
 				B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
