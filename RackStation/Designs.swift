@@ -64,6 +64,14 @@ struct ChipDesign : Codable, Identifiable {
     self.labelText = labelText
   }
   
+  init (symbol: Symbols) {
+    self.init(iconName: symbol.rawValue, labelText: symbol.rawValue)
+  }
+  
+  static func random () -> ChipDesign {
+    return Self.init(symbol: .random())
+  }
+  
   let id : UUID
   let iconName : String
   let labelText : String
@@ -71,6 +79,10 @@ struct ChipDesign : Codable, Identifiable {
 
 struct ChipsCollectionDesign : Codable {
   let chips : [ChipDesign]
+  
+  static func random (withCount count: Int = .random(in: 5...9)) -> ChipsCollectionDesign {
+    return .init(chips: .init(factory: ChipDesign.random, count: count))
+  }
 }
 
 

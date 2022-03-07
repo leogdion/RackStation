@@ -13,8 +13,9 @@ struct HomeView: View {
   @ObservedObject var design : HomeViewDesign
     var body: some View {
       ScrollView{
-        LazyVStack{
+        LazyVStack(spacing: 20.0){
           ForEach(design.children) { design in
+            
             switch design.design {
             case let .pickupStatus(design):
               PickupStatusView(design: design)
@@ -22,7 +23,7 @@ struct HomeView: View {
               ChipsCollectionView(design: design)
             }
           }
-        }.padding()
+        }.padding(.vertical)
       }
         
     }
@@ -32,15 +33,8 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
       HomeView(design: .init(children: [
         .pickupStatus(.init()),
-        .chips(.init(chips: [
-          .init(iconName: "pencil", labelText: "Pencil"),
-          .init(iconName: "pencil", labelText: "Pencil"),
-          .init(iconName: "pencil", labelText: "Pencil"),
-          .init(iconName: "pencil", labelText: "Pencil"),
-          .init(iconName: "pencil", labelText: "Pencil"),
-          .init(iconName: "pencil", labelText: "Pencil")
-        ])),
-        .chips(.init(chips: [.init(iconName: "pencil", labelText: "Pencil")])),
+        .chips(.random()),
+        .chips(.random())
         
       ]))
     }

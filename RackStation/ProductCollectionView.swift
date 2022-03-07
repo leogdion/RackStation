@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ChipsCollectionView: View {
-  let design : ChipsCollectionDesign
+struct ProductCollectionView: View {
+  let design : ProductCollectionDesign
     var body: some View {
       VStack{
         HStack{
@@ -20,17 +20,15 @@ struct ChipsCollectionView: View {
         }
       ScrollView(.horizontal) {
         LazyHStack(spacing: 16.0){
-          ForEach(design.chips, content: ChipView.init(design:)).frame(width: 72.0)
+//          ForEach(design.products, content: ChipView.init(design:)).frame(width: 72.0)
         }.frame(height: 72.0)
       }
       }
     }
 }
 
-struct ChipsCollectionView_Previews: PreviewProvider {
+struct ProductCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-      ChipsCollectionView(design: .init(chips: .init(factory: ChipDesign.random, count: 7)
-          
-                                       ))
+      ProductCollectionView(design: .init(headerText: "Test", products: .init()))
     }
 }

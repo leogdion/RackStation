@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ChipView: View {
-  let design : ChipDesign
+struct ProductView: View {
+  let design : ProductDesign
     var body: some View {
       VStack{
         ZStack{
-          Image(systemName: design.iconName).resizable().scaledToFit().padding(16.0)
+          Image(systemName: design.photoName).resizable().scaledToFit().padding(16.0)
           Circle().stroke()
         }.layoutPriority(1.0)
         Text(design.labelText).font(/*@START_MENU_TOKEN@*/.caption/*@END_MENU_TOKEN@*/).lineLimit(1)
@@ -20,9 +20,9 @@ struct ChipView: View {
     }
 }
 
-struct ChipView_Previews: PreviewProvider {
+struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-      ChipView(design: .init(iconName: "pencil", labelText: "Pencil"))
+      ProductView(design: .init(price: 10.12, labelText: "test", photoName: "test"))
         .previewLayout(.fixed(width: 80.0, height: 80.0))
         
     }
