@@ -22,7 +22,12 @@ extension Array {
 
 
 class HomeViewDesign : ObservableObject {
-  @Published var children = [HomeDesignItem].init([.init(design: .pickupStatus(.init()), id: .init())])
+  @Published var children = [HomeDesignItem].init([.init(design: .pickupStatus(.init()), id: .init()), .init(design: .chips(.init(chips: [
+    .init(iconName: "pencil", labelText: "Pencil"),
+    .init(iconName: "pencil", labelText: "Pencil"),
+    .init(iconName: "pencil", labelText: "Pencil"),
+    .init(iconName: "pencil", labelText: "Pencil")
+  ])), id: .init())])
   
   init () {
     

@@ -32,8 +32,15 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
       HomeView(design: .init(children: [
         .pickupStatus(.init()),
-        .chips(.init(chips: [])),
-        .chips(.init(chips: [])),
+        .chips(.init(chips: [
+          .init(iconName: "pencil", labelText: "Pencil"),
+          .init(iconName: "pencil", labelText: "Pencil"),
+          .init(iconName: "pencil", labelText: "Pencil"),
+          .init(iconName: "pencil", labelText: "Pencil"),
+          .init(iconName: "pencil", labelText: "Pencil"),
+          .init(iconName: "pencil", labelText: "Pencil")
+        ])),
+        .chips(.init(chips: [.init(iconName: "pencil", labelText: "Pencil")])),
         
       ]))
     }

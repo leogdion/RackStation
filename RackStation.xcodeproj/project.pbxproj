@@ -17,6 +17,7 @@
 		B3798BAF27CFD68E001EB0DC /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */; };
 		B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAD27CFD68E001EB0DC /* HomeView.swift */; };
 		B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */; };
+		B3D6202527D6409200B0ECC5 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6202427D6409200B0ECC5 /* ChipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B3798BAC27CFD68E001EB0DC /* HomeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		B3798BAD27CFD68E001EB0DC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewDesign.swift; sourceTree = "<group>"; };
+		B3D6202427D6409200B0ECC5 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				B3120D4027D16564005601FA /* Designs.swift */,
 				B3120D4227D16CE7005601FA /* PickupStatusView.swift */,
 				B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */,
+				B3D6202427D6409200B0ECC5 /* ChipView.swift */,
 			);
 			path = RackStation;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */,
 				B3798BAA27CFD66D001EB0DC /* AreaDesign.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
+				B3D6202527D6409200B0ECC5 /* ChipView.swift in Sources */,
 				B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
 				B3120D4127D16564005601FA /* Designs.swift in Sources */,

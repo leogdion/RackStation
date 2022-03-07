@@ -57,7 +57,14 @@ struct PickupStatusDesign : Codable {
 }
 
 
-struct ChipDesign : Codable{
+struct ChipDesign : Codable, Identifiable {
+  internal init(id: UUID = .init(), iconName: String, labelText: String) {
+    self.id = id
+    self.iconName = iconName
+    self.labelText = labelText
+  }
+  
+  let id : UUID
   let iconName : String
   let labelText : String
 }
