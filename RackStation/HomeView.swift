@@ -24,6 +24,8 @@ struct HomeView: View {
               ProductCollectionView(design: design)
             case let .departments(design):
               DepartmentCollectionView(design: design)
+            case let .promo(design):
+              PromoView(design: design)
             }
           }
         }.padding(.vertical)

@@ -28,6 +28,7 @@ class HomeViewDesign : ObservableObject {
       .init(design: .chips(.init(chips: .init(factory: {
       ChipDesign(symbol: .random())
       }, count: 5))), id: .init()),
+      .init(design: .promo(.random())),
       .init(design: .products(.random(headerText: "Produss"))),
       .init(design: .departments(.random())),
       .init(design: .products(.random(headerText: "Bairy")))])

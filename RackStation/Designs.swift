@@ -32,6 +32,33 @@ extension Decoder {
     }
     return nil
   }
+  
+  
+  func decode<CodableType : Codable, OtherType>(_ type: CodableType.Type, _ otherType : @escaping (CodableType) -> OtherType, _ lastError: inout Error?) -> OtherType? {
+    do {
+      let value = try CodableType(from: self)
+      return otherType(value)
+    } catch {
+      lastError = error
+    }
+    return nil
+  }
+}
+
+struct PromoDesign : Codable, Identifiable {
+  internal init(id: UUID = .init(), imageURL: URL) {
+    self.id = id
+    self.imageURL = imageURL
+  }
+  
+  static let defaultURL = URL(string: "https://picsum.photos/900/300")!
+  
+  let id : UUID
+  let imageURL : URL
+  
+  static func random () -> PromoDesign {
+    self.init(imageURL: defaultURL)
+  }
 }
 
 enum RootDesignable : Codable {
@@ -40,6 +67,8 @@ enum RootDesignable : Codable {
   case chips(ChipsCollectionDesign)
   case products(ProductCollectionDesign)
   case departments(DepartmentCollectionDesign)
+  case promo(PromoDesign)
+  
   
   
   init(from decoder: Decoder) throws {
@@ -59,6 +88,10 @@ enum RootDesignable : Codable {
     
     if let design = decoder.decode(DepartmentCollectionDesign.self, &lastError) {
       self = .departments(design)
+    }
+    
+    if let value = decoder.decode(PromoDesign.self, Self.promo, &lastError) {
+      self = value
     }
     
     if let lastError = lastError {
@@ -114,10 +147,6 @@ struct ChipsCollectionDesign : Codable {
   }
 }
 
-
-struct PromoDesign {
-  let imageURL : URL
-}
 
 enum Department : String, CaseIterable {
   case automotive = "Automotive"
