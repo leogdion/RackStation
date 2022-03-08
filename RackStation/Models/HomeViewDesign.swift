@@ -1,10 +1,3 @@
-//
-//  CollectionView.swift
-//  Meijer
-//
-//  Created by Leo Dion on 3/1/22.
-//  Copyright © 2022 Meijer. All rights reserved.
-//
 
 import SwiftUI
 

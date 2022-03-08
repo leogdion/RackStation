@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3120D4127D16564005601FA /* Designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4027D16564005601FA /* Designs.swift */; };
+		B3120D4127D16564005601FA /* ProductCollectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4027D16564005601FA /* ProductCollectionDesign.swift */; };
 		B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4227D16CE7005601FA /* PickupStatusView.swift */; };
 		B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */; };
 		B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798B9527CFC952001EB0DC /* RackStationApp.swift */; };
@@ -18,6 +18,17 @@
 		B3AA9EC627D7B7C40006A155 /* DepartmentCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */; };
 		B3AA9EC827D806320006A155 /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC727D806320006A155 /* DepartmentView.swift */; };
 		B3AA9ECA27D80BB60006A155 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC927D80BB60006A155 /* PromoView.swift */; };
+		B3AA9ED627D80DCF0006A155 /* HomeDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ECB27D80DCE0006A155 /* HomeDesign.swift */; };
+		B3AA9ED727D80DCF0006A155 /* PromoDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ECC27D80DCE0006A155 /* PromoDesign.swift */; };
+		B3AA9ED827D80DCF0006A155 /* ChipsCollectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ECD27D80DCE0006A155 /* ChipsCollectionDesign.swift */; };
+		B3AA9ED927D80DCF0006A155 /* DepartmentDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ECE27D80DCF0006A155 /* DepartmentDesign.swift */; };
+		B3AA9EDA27D80DCF0006A155 /* ProductDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ECF27D80DCF0006A155 /* ProductDesign.swift */; };
+		B3AA9EDB27D80DCF0006A155 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED027D80DCF0006A155 /* Decoder.swift */; };
+		B3AA9EDC27D80DCF0006A155 /* ChipDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED127D80DCF0006A155 /* ChipDesign.swift */; };
+		B3AA9EDD27D80DCF0006A155 /* HomeDesignItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED227D80DCF0006A155 /* HomeDesignItem.swift */; };
+		B3AA9EDE27D80DCF0006A155 /* PickupStatusDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED327D80DCF0006A155 /* PickupStatusDesign.swift */; };
+		B3AA9EDF27D80DCF0006A155 /* RootDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED427D80DCF0006A155 /* RootDesignable.swift */; };
+		B3AA9EE027D80DCF0006A155 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9ED527D80DCF0006A155 /* Department.swift */; };
 		B3B762AA27D69113005F8080 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B762A927D69113005F8080 /* Symbols.swift */; };
 		B3B762AC27D69B55005F8080 /* ProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B762AB27D69B55005F8080 /* ProductCollectionView.swift */; };
 		B3B762AE27D69C3F005F8080 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B762AD27D69C3F005F8080 /* ProductView.swift */; };
@@ -25,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B3120D4027D16564005601FA /* Designs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designs.swift; sourceTree = "<group>"; };
+		B3120D4027D16564005601FA /* ProductCollectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionDesign.swift; sourceTree = "<group>"; };
 		B3120D4227D16CE7005601FA /* PickupStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupStatusView.swift; sourceTree = "<group>"; };
 		B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsCollectionView.swift; sourceTree = "<group>"; };
 		B3798B9227CFC952001EB0DC /* RackStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RackStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +48,17 @@
 		B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionView.swift; sourceTree = "<group>"; };
 		B3AA9EC727D806320006A155 /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
 		B3AA9EC927D80BB60006A155 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
+		B3AA9ECB27D80DCE0006A155 /* HomeDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDesign.swift; sourceTree = "<group>"; };
+		B3AA9ECC27D80DCE0006A155 /* PromoDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoDesign.swift; sourceTree = "<group>"; };
+		B3AA9ECD27D80DCE0006A155 /* ChipsCollectionDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipsCollectionDesign.swift; sourceTree = "<group>"; };
+		B3AA9ECE27D80DCF0006A155 /* DepartmentDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentDesign.swift; sourceTree = "<group>"; };
+		B3AA9ECF27D80DCF0006A155 /* ProductDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDesign.swift; sourceTree = "<group>"; };
+		B3AA9ED027D80DCF0006A155 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		B3AA9ED127D80DCF0006A155 /* ChipDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipDesign.swift; sourceTree = "<group>"; };
+		B3AA9ED227D80DCF0006A155 /* HomeDesignItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDesignItem.swift; sourceTree = "<group>"; };
+		B3AA9ED327D80DCF0006A155 /* PickupStatusDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupStatusDesign.swift; sourceTree = "<group>"; };
+		B3AA9ED427D80DCF0006A155 /* RootDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootDesignable.swift; sourceTree = "<group>"; };
+		B3AA9ED527D80DCF0006A155 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		B3B762A927D69113005F8080 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		B3B762AB27D69B55005F8080 /* ProductCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionView.swift; sourceTree = "<group>"; };
 		B3B762AD27D69C3F005F8080 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
@@ -73,21 +95,12 @@
 		B3798B9427CFC952001EB0DC /* RackStation */ = {
 			isa = PBXGroup;
 			children = (
-				B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */,
-				B3798B9527CFC952001EB0DC /* RackStationApp.swift */,
-				B3798BAD27CFD68E001EB0DC /* HomeView.swift */,
 				B3798B9927CFC957001EB0DC /* Assets.xcassets */,
+				B3AA9EE227D80EC80006A155 /* Models */,
+				B3AA9EE127D80EB60006A155 /* Views */,
+				B3AA9ED027D80DCF0006A155 /* Decoder.swift */,
 				B3798B9B27CFC957001EB0DC /* Preview Content */,
-				B3B762AB27D69B55005F8080 /* ProductCollectionView.swift */,
-				B3120D4027D16564005601FA /* Designs.swift */,
-				B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */,
-				B3B762AD27D69C3F005F8080 /* ProductView.swift */,
-				B3120D4227D16CE7005601FA /* PickupStatusView.swift */,
-				B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */,
-				B3D6202427D6409200B0ECC5 /* ChipView.swift */,
-				B3B762A927D69113005F8080 /* Symbols.swift */,
-				B3AA9EC727D806320006A155 /* DepartmentView.swift */,
-				B3AA9EC927D80BB60006A155 /* PromoView.swift */,
+				B3798B9527CFC952001EB0DC /* RackStationApp.swift */,
 			);
 			path = RackStation;
 			sourceTree = "<group>";
@@ -98,6 +111,42 @@
 				B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3AA9EE127D80EB60006A155 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */,
+				B3D6202427D6409200B0ECC5 /* ChipView.swift */,
+				B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */,
+				B3AA9EC727D806320006A155 /* DepartmentView.swift */,
+				B3798BAD27CFD68E001EB0DC /* HomeView.swift */,
+				B3120D4227D16CE7005601FA /* PickupStatusView.swift */,
+				B3B762AB27D69B55005F8080 /* ProductCollectionView.swift */,
+				B3B762AD27D69C3F005F8080 /* ProductView.swift */,
+				B3AA9EC927D80BB60006A155 /* PromoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3AA9EE227D80EC80006A155 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3AA9ED127D80DCF0006A155 /* ChipDesign.swift */,
+				B3AA9ECD27D80DCE0006A155 /* ChipsCollectionDesign.swift */,
+				B3AA9ED527D80DCF0006A155 /* Department.swift */,
+				B3AA9ECE27D80DCF0006A155 /* DepartmentDesign.swift */,
+				B3AA9ECB27D80DCE0006A155 /* HomeDesign.swift */,
+				B3AA9ED227D80DCF0006A155 /* HomeDesignItem.swift */,
+				B3120D4027D16564005601FA /* ProductCollectionDesign.swift */,
+				B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */,
+				B3AA9ED327D80DCF0006A155 /* PickupStatusDesign.swift */,
+				B3AA9ECF27D80DCF0006A155 /* ProductDesign.swift */,
+				B3AA9ECC27D80DCE0006A155 /* PromoDesign.swift */,
+				B3AA9ED427D80DCF0006A155 /* RootDesignable.swift */,
+				B3B762A927D69113005F8080 /* Symbols.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,19 +219,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3AA9EDD27D80DCF0006A155 /* HomeDesignItem.swift in Sources */,
 				B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */,
 				B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */,
 				B3AA9ECA27D80BB60006A155 /* PromoView.swift in Sources */,
+				B3AA9EDA27D80DCF0006A155 /* ProductDesign.swift in Sources */,
 				B3AA9EC827D806320006A155 /* DepartmentView.swift in Sources */,
+				B3AA9EDB27D80DCF0006A155 /* Decoder.swift in Sources */,
 				B3AA9EC627D7B7C40006A155 /* DepartmentCollectionView.swift in Sources */,
+				B3AA9EDF27D80DCF0006A155 /* RootDesignable.swift in Sources */,
 				B3B762AE27D69C3F005F8080 /* ProductView.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
 				B3B762AC27D69B55005F8080 /* ProductCollectionView.swift in Sources */,
 				B3B762AA27D69113005F8080 /* Symbols.swift in Sources */,
+				B3AA9ED727D80DCF0006A155 /* PromoDesign.swift in Sources */,
+				B3AA9ED827D80DCF0006A155 /* ChipsCollectionDesign.swift in Sources */,
+				B3AA9EDE27D80DCF0006A155 /* PickupStatusDesign.swift in Sources */,
+				B3AA9EDC27D80DCF0006A155 /* ChipDesign.swift in Sources */,
+				B3AA9ED627D80DCF0006A155 /* HomeDesign.swift in Sources */,
 				B3D6202527D6409200B0ECC5 /* ChipView.swift in Sources */,
+				B3AA9EE027D80DCF0006A155 /* Department.swift in Sources */,
 				B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
-				B3120D4127D16564005601FA /* Designs.swift in Sources */,
+				B3AA9ED927D80DCF0006A155 /* DepartmentDesign.swift in Sources */,
+				B3120D4127D16564005601FA /* ProductCollectionDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
