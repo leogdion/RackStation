@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct PromoView: View {
-  let design : PromoDesign
+    let design: PromoDesign
     var body: some View {
-      AsyncImage(url: design.imageURL) { image in
-        image.resizable()
-      } placeholder: {
-        ProgressView()
-      }.scaledToFit().padding()
+        AsyncImage(url: design.imageURL) { image in
+            image.resizable()
+        } placeholder: {
+            ProgressView()
+        }.scaledToFit().padding()
     }
 }
 
 struct PromoView_Previews: PreviewProvider {
     static var previews: some View {
-      PromoView(design: .random())
+        PromoView(design: .random())
     }
 }

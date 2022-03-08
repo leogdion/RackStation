@@ -4,11 +4,9 @@
 //  Created by Leo Dion on 3/3/22.
 //
 
-import Foundation
 import Accessibility
+import Foundation
 
-struct HomeDesign : Codable {
-  let children : [RootDesignable]
- 
+struct HomeDesign: Codable {
+    let children: [RootDesignable]
 }
-
