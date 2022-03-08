@@ -11,19 +11,34 @@ struct ProductView: View {
   let design : ProductDesign
     var body: some View {
       VStack{
-        ZStack{
-          Image(systemName: design.photoName).resizable().scaledToFit().padding(16.0)
-          Circle().stroke()
-        }.layoutPriority(1.0)
-        Text(design.labelText).font(/*@START_MENU_TOKEN@*/.caption/*@END_MENU_TOKEN@*/).lineLimit(1)
+        ZStack(alignment: .bottomTrailing){
+          AsyncImage(url: design.imageURL) { image in
+            image.resizable()
+          } placeholder: {
+            ProgressView()
+          }.scaledToFit().frame(width: 150, height: 150)
+          Button {
+            
+          } label: {
+            ZStack{
+              Circle().foregroundColor(.blue)
+              Image(systemName: Symbols.plus.rawValue).foregroundColor(.white)
+            }
+          }
+
+          .frame(width: 64.0, height: 64.0, alignment: .bottomTrailing)
+        }
+        VStack(alignment: .leading, spacing: 8.0){
+          Text("$\(design.price.formatted())").font(.title2).fontWeight(.black).multilineTextAlignment(.leading)
+        Text(design.labelText).lineLimit(2).multilineTextAlignment(.leading)
+        }
       }
     }
 }
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-      ProductView(design: .init(price: 10.12, labelText: "test", photoName: "test"))
-        .previewLayout(.fixed(width: 80.0, height: 80.0))
+      ProductView(design: .random()).previewLayout(.fixed(width: 200, height: 300)).previewDevice(.none)
         
     }
 }

@@ -12,7 +12,7 @@ struct ProductCollectionView: View {
     var body: some View {
       VStack{
         HStack{
-          Text("Shop By Department")
+          Text(design.headerText)
           Spacer()
           Button("View All") {
             
@@ -20,8 +20,10 @@ struct ProductCollectionView: View {
         }
       ScrollView(.horizontal) {
         LazyHStack(spacing: 16.0){
-//          ForEach(design.products, content: ChipView.init(design:)).frame(width: 72.0)
-        }.frame(height: 72.0)
+          ForEach(self.design.products) { design in
+            ProductView(design: design)
+          }
+        }.frame(height: 300.0)
       }
       }
     }
@@ -29,6 +31,6 @@ struct ProductCollectionView: View {
 
 struct ProductCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-      ProductCollectionView(design: .init(headerText: "Test", products: .init()))
+      ProductCollectionView(design: .random(headerText: "Bairy"))
     }
 }

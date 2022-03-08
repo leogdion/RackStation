@@ -13,6 +13,11 @@ struct HomeDesign : Codable {
 }
 
 struct HomeDesignItem : Identifiable {
+  internal init(design: RootDesignable, id: UUID = .init()) {
+    self.design = design
+    self.id = id
+  }
+  
   let design : RootDesignable
   let id : UUID
 }
@@ -32,6 +37,7 @@ enum RootDesignable : Codable {
   
   case pickupStatus(PickupStatusDesign)
   case chips(ChipsCollectionDesign)
+  case products(ProductCollectionDesign)
   
   
   init(from decoder: Decoder) throws {
@@ -43,6 +49,10 @@ enum RootDesignable : Codable {
     
     if let design = decoder.decode(ChipsCollectionDesign.self, &lastError) {
       self = .chips(design)
+    }
+    
+    if let design = decoder.decode(ProductCollectionDesign.self, &lastError) {
+      self = .products(design)
     }
     
     if let lastError = lastError {
@@ -99,13 +109,40 @@ struct DepartmentCollectionDesign {
   let departments : [DepartmentDesign]
 }
 
-struct ProductDesign {
+struct ProductDesign  : Codable, Identifiable {
+  static let defaultURL = URL(string: "https://picsum.photos/300")!
+  internal init(id: UUID = .init(), price: Decimal, labelText: String, imageURL: URL = ProductDesign.defaultURL) {
+    self.id = id
+    self.price = price
+    self.labelText = labelText
+    self.imageURL = imageURL
+  }
+  
+  let id : UUID
   let price : Decimal
   let labelText : String
-  let photoName : String
+  let imageURL : URL
+  
+  
+  
+  static func random () -> ProductDesign {
+    let price = Decimal(Double(Int.random(in: 100..<10000))/100.0)
+    return Self.init(price: price, labelText: "Meijer 2% Reduced Fat Milk, Gallon")
+  }
+  
 }
 
-struct ProductCollectionDesign {
+struct ProductCollectionDesign : Codable {
+  internal init(headerText: String, products: [ProductDesign]) {
+    self.headerText = headerText
+    self.products = products
+  }
+  
   let headerText : String
   let products : [ProductDesign]
+  
+  
+  static func random (headerText : String, withCount count: Int = .random(in: 5...9)) -> ProductCollectionDesign {
+    return .init(headerText: headerText, products: .init(factory: ProductDesign.random, count: count))
+  }
 }
