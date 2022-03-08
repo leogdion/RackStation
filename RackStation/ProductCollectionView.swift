@@ -12,18 +12,21 @@ struct ProductCollectionView: View {
     var body: some View {
       VStack{
         HStack{
-          Text(design.headerText)
+          Text(design.headerText).bold()
           Spacer()
-          Button("View All") {
+          Button {
             
+          } label: {
+            Text("View All").bold()
           }
-        }
+
+        }.padding(.horizontal)
       ScrollView(.horizontal) {
         LazyHStack(spacing: 16.0){
           ForEach(self.design.products) { design in
             ProductView(design: design)
           }
-        }.frame(height: 300.0)
+        }.frame(height: 250.0).padding(.horizontal)
       }
       }
     }

@@ -8,24 +8,34 @@
 import SwiftUI
 
 struct PickupStatusView: View {
+  static let dateFormatter : DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.timeStyle = .none
+    formatter.dateFormat = "MMMM d"
+    return formatter
+  }()
+  static let timeFormatter : DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.timeStyle = .short
+    formatter.dateFormat = .none
+    return formatter
+  }()
   let design : PickupStatusDesign
     var body: some View {
-      ZStack{
-        RoundedRectangle(cornerRadius: 8.0)
-          .foregroundStyle(
-            .linearGradient(
-            colors: [.yellow, .blue],
-            startPoint: .top,
-            endPoint: .bottom
-          )
-        )
-        Text("Hello World")
+      HStack(alignment: .top, spacing: 8.0){
+        Image(systemName: Symbols.bag.rawValue)
+        VStack(alignment: .leading, spacing: 8.0){
+          Text("Pickup at W Saginaw Hwy").bold()
+          Text("Available \(PickupStatusView.dateFormatter.string(from: design.date)) starting at \(PickupStatusView.timeFormatter.string(from: design.date))").foregroundColor(.gray)
+        }
+        Spacer()
+        Image(systemName: Symbols.chevron_r_g_t.rawValue)
       }.frame(height: 90.0)
     }
 }
 
 struct PickupStatusView_Previews: PreviewProvider {
     static var previews: some View {
-      PickupStatusView(design: .init())
+      PickupStatusView(design: .random())
     }
 }

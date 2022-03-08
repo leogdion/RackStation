@@ -33,7 +33,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
       HomeView(design: .init(children: [
-        .pickupStatus(.init()),
+        .pickupStatus(.random()),
         .chips(.random()),
         .chips(.random()),
         .products(.random(headerText: "Bairy"))
