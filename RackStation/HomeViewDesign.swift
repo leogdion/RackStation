@@ -25,9 +25,7 @@ class HomeViewDesign : ObservableObject {
   @Published var children = [HomeDesignItem].init(
     [
       .init(design: .pickupStatus(.random()), id: .init()),
-      .init(design: .chips(.init(chips: .init(factory: {
-      ChipDesign(symbol: .random())
-      }, count: 5))), id: .init()),
+      .init(design: .chips(.random())),
       .init(design: .promo(.random())),
       .init(design: .products(.random(headerText: "Produss"))),
       .init(design: .departments(.random())),

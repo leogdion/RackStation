@@ -30,7 +30,7 @@ struct PickupStatusView: View {
         }
         Spacer()
         Image(systemName: Symbols.chevron_r_g_t.rawValue)
-      }.frame(height: 90.0)
+      }.frame(height: 90.0).padding(.horizontal)
     }
 }
 
