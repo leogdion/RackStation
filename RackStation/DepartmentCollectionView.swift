@@ -22,17 +22,19 @@ struct DepartmentCollectionView: View {
         }.padding(.horizontal)
       ScrollView(.horizontal) {
         LazyHStack(spacing: 16.0){
-          //ForEach(design.departments, content: ChipView.init(design:)).frame(width: 72.0)
+          ForEach(
+            design.departments,
+            content: DepartmentView.init(design:)
+          ).frame(width: 72.0)
         }.frame(height: 72.0).padding(.horizontal)
       }
-      }.padding(.vertical).overlay(Divider(), alignment: .top)
-        .overlay(Divider(), alignment: .bottom)
+      }.padding(.vertical)
     }
 }
 
 struct DepartmentCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-      DepartmentCollectionView(design: .init(departments: []))
+      DepartmentCollectionView(design: .random())
                                        
     }
 }

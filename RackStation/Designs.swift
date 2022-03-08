@@ -39,6 +39,7 @@ enum RootDesignable : Codable {
   case pickupStatus(PickupStatusDesign)
   case chips(ChipsCollectionDesign)
   case products(ProductCollectionDesign)
+  case departments(DepartmentCollectionDesign)
   
   
   init(from decoder: Decoder) throws {
@@ -54,6 +55,10 @@ enum RootDesignable : Codable {
     
     if let design = decoder.decode(ProductCollectionDesign.self, &lastError) {
       self = .products(design)
+    }
+    
+    if let design = decoder.decode(DepartmentCollectionDesign.self, &lastError) {
+      self = .departments(design)
     }
     
     if let lastError = lastError {
@@ -114,13 +119,55 @@ struct PromoDesign {
   let imageURL : URL
 }
 
-struct DepartmentDesign {
-  let iconName : String
-  let labelText : String
+enum Department : String, CaseIterable {
+  case automotive = "Automotive"
+  case baby = "Baby"
+  case beauty = "Beauty"
+  case books = "Books"
+  case clothing = "Clothing"
+  case computers = "Computers"
+  case electronics = "Electronics"
+  case games = "Games"
+  case garden = "Garden"
+  case grocery = "Grocery"
+  case health = "Health"
+  case home = "Home"
+  case industrial = "Industrial"
+  case jewelry = "Jewelry"
+  case kids = "Kids"
+  case movies = "Movies"
+  case music = "Music"
+  case outdoors = "Outdoors"
+  case shoes = "Shoes"
+  case sports = "Sports"
+  case toys = "Toys"
 }
 
-struct DepartmentCollectionDesign {
+struct DepartmentDesign : Codable, Identifiable {
+  internal init(id : UUID = .init(), iconName: String, labelText: String) {
+    self.id = id
+    self.iconName = iconName
+    self.labelText = labelText
+  }
+  
+  let id : UUID
+  let iconName : String
+  let labelText : String
+  
+  static func random () -> DepartmentDesign {
+    let department = Department.random()
+    let symbol = Symbols.random()
+    return Self.init(iconName: symbol.rawValue, labelText: department.rawValue)
+  }
+}
+
+struct DepartmentCollectionDesign : Codable {
   let departments : [DepartmentDesign]
+  
+  
+  static func random (withCount count: Int = .random(in: 5...9)) -> DepartmentCollectionDesign {
+    return .init(departments: .init(factory: DepartmentDesign.random, count: count))
+  }
 }
 
 struct ProductDesign  : Codable, Identifiable {

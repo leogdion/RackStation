@@ -10,21 +10,10 @@ import SwiftUI
 struct ChipsCollectionView: View {
   let design : ChipsCollectionDesign
     var body: some View {
-      VStack{
-        HStack{
-          Text("Shop By Department").bold()
-          Spacer()
-          Button {
-            
-          } label: {
-            Text("View All").bold()
-          }
-        }.padding(.horizontal)
       ScrollView(.horizontal) {
         LazyHStack(spacing: 16.0){
           ForEach(design.chips, content: ChipView.init(design:)).frame(width: 72.0)
         }.frame(height: 72.0).padding(.horizontal)
-      }
       }.padding(.vertical).overlay(Divider(), alignment: .top)
         .overlay(Divider(), alignment: .bottom)
     }
