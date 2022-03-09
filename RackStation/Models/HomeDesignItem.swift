@@ -9,3 +9,9 @@ struct HomeDesignItem: Identifiable {
     let design: RootDesignable
     let id: UUID
 }
+
+extension HomeDesignItem {
+  func randomized () -> HomeDesignItem {
+    HomeDesignItem(design: self.design.randomized(), id: self.id)
+  }
+}

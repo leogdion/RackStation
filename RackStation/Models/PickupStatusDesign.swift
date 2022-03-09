@@ -1,6 +1,6 @@
 import Foundation
 
-struct PickupStatusDesign: Codable {
+struct PickupStatusDesign: Codable, Randomizable {
     internal init(locationName: String, status: PickupStatusDesign.Status, date: Date) {
         self.locationName = locationName
         self.status = status
@@ -15,6 +15,11 @@ struct PickupStatusDesign: Codable {
         case pickup = "Pickup at"
         case deliver = "Deliver from"
     }
+  
+  func randomize() -> PickupStatusDesign {
+    let other = Self.random()
+    return Self.init(locationName: other.locationName, status: other.status, date: other.date)
+  }
 
     let status: Status
     let date: Date

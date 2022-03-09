@@ -10,6 +10,16 @@ extension Array {
     }
 }
 
+extension Array where Element == HomeDesignItem {
+  func randomized () -> Self {
+    return self.map{
+      $0.randomized()
+    }
+  }
+}
+
+
+
 class HomeViewDesign: ObservableObject {
   static func randomChildren () -> [RootDesignable]{
      [RootDesignable].init(
@@ -27,7 +37,9 @@ class HomeViewDesign: ObservableObject {
   fileprivate init(children : [HomeDesignItem]) {
     self.children = children
     
-    //Timer.publish(every: 10.0, tolerance: 10.0, on: .main, in: .default, options: nil).autoconnect().map{ _ in Self.randomChildren()}.assign(to: &self.$children)
+    Timer.publish(every: 5.0, tolerance: 10.0, on: .main, in: .default, options: nil).autoconnect().map{ _ in
+      self.children.randomized()
+    }.assign(to: &self.$children)
   }
 
   convenience init(designs: [RootDesignable]? = nil) {

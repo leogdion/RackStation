@@ -10,6 +10,8 @@
 		B3120D4127D16564005601FA /* ProductCollectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4027D16564005601FA /* ProductCollectionDesign.swift */; };
 		B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4227D16CE7005601FA /* PickupStatusView.swift */; };
 		B3120D4527D16ECD005601FA /* ChipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */; };
+		B360DC5E27D931CE00D21557 /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360DC5D27D931CE00D21557 /* Randomizable.swift */; };
+		B360DC6027D9322800D21557 /* DepartmentCollectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360DC5F27D9322800D21557 /* DepartmentCollectionDesign.swift */; };
 		B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798B9527CFC952001EB0DC /* RackStationApp.swift */; };
 		B3798B9A27CFC957001EB0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9927CFC957001EB0DC /* Assets.xcassets */; };
 		B3798B9D27CFC957001EB0DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		B3120D4027D16564005601FA /* ProductCollectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionDesign.swift; sourceTree = "<group>"; };
 		B3120D4227D16CE7005601FA /* PickupStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupStatusView.swift; sourceTree = "<group>"; };
 		B3120D4427D16ECD005601FA /* ChipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsCollectionView.swift; sourceTree = "<group>"; };
+		B360DC5D27D931CE00D21557 /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
+		B360DC5F27D9322800D21557 /* DepartmentCollectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionDesign.swift; sourceTree = "<group>"; };
 		B3798B9227CFC952001EB0DC /* RackStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RackStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3798B9527CFC952001EB0DC /* RackStationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackStationApp.swift; sourceTree = "<group>"; };
 		B3798B9927CFC957001EB0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				B3AA9ECC27D80DCE0006A155 /* PromoDesign.swift */,
 				B3AA9ED427D80DCF0006A155 /* RootDesignable.swift */,
 				B3B762A927D69113005F8080 /* Symbols.swift */,
+				B360DC5D27D931CE00D21557 /* Randomizable.swift */,
+				B360DC5F27D9322800D21557 /* DepartmentCollectionDesign.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,12 +240,14 @@
 				B3B762AA27D69113005F8080 /* Symbols.swift in Sources */,
 				B3AA9ED727D80DCF0006A155 /* PromoDesign.swift in Sources */,
 				B3AA9ED827D80DCF0006A155 /* ChipsCollectionDesign.swift in Sources */,
+				B360DC5E27D931CE00D21557 /* Randomizable.swift in Sources */,
 				B3AA9EDE27D80DCF0006A155 /* PickupStatusDesign.swift in Sources */,
 				B3AA9EDC27D80DCF0006A155 /* ChipDesign.swift in Sources */,
 				B3AA9ED627D80DCF0006A155 /* HomeDesign.swift in Sources */,
 				B3D6202527D6409200B0ECC5 /* ChipView.swift in Sources */,
 				B3AA9EE027D80DCF0006A155 /* Department.swift in Sources */,
 				B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */,
+				B360DC6027D9322800D21557 /* DepartmentCollectionDesign.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
 				B3AA9ED927D80DCF0006A155 /* DepartmentDesign.swift in Sources */,
 				B3120D4127D16564005601FA /* ProductCollectionDesign.swift in Sources */,

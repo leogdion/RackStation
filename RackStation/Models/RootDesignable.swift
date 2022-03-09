@@ -34,4 +34,19 @@ enum RootDesignable: Codable {
             throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "No Matching Design."))
         }
     }
+  
+  func randomized () -> RootDesignable {
+    switch self {
+    case let .pickupStatus(design):
+      return .pickupStatus(design.randomize())
+    case let .chips(design):
+      return .chips(design.randomize())
+    case let .products(design):
+      return .products(design.randomize())
+    case let .departments(design):
+      return .departments(design.randomize())
+    case let .promo(design):
+      return .promo(design.randomize())
+    }
+  }
 }
