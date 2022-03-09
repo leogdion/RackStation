@@ -11,21 +11,30 @@ extension Array {
 }
 
 class HomeViewDesign: ObservableObject {
-    @Published var children = [HomeDesignItem].init(
+  static func randomChildren () -> [RootDesignable]{
+     [RootDesignable].init(
         [
-            .init(design: .pickupStatus(.random()), id: .init()),
-            .init(design: .chips(.random())),
-            .init(design: .promo(.random())),
-            .init(design: .products(.random(headerText: "Pro-Duece"))),
-            .init(design: .departments(.random())),
-            .init(design: .products(.random(headerText: "Bairy"))),
+            .pickupStatus(.random()),
+            .chips(.random()),
+            .promo(.random()),
+            .products(.random(headerText: "Pro-Duece")),
+            .departments(.random()),
+            .products(.random(headerText: "Bairy")),
         ])
+  }
+  @Published var children : [HomeDesignItem]
 
-    init() {}
+  fileprivate init(children : [HomeDesignItem]) {
+    self.children = children
+    
+    //Timer.publish(every: 10.0, tolerance: 10.0, on: .main, in: .default, options: nil).autoconnect().map{ _ in Self.randomChildren()}.assign(to: &self.$children)
+  }
 
-    init(children: [RootDesignable]) {
-        self.children = children.map {
-            .init(design: $0, id: .init())
+  convenience init(designs: [RootDesignable]? = nil) {
+    let designs = designs ?? Self.randomChildren()
+        let children = designs.map {
+          HomeDesignItem.init(design: $0, id: .init())
         }
+      self.init(children: children)
     }
 }
