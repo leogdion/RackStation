@@ -7,6 +7,46 @@
 
 import SwiftUI
 
+
+struct RemoteImage : View {
+  @StateObject var imageObject : RemoteImageObject
+  
+  init (url : URL) {
+    self._imageObject = StateObject(wrappedValue: .init(url: url))
+  }
+  
+  var body: some View {
+    Group {
+      if let uiImage = imageObject.image {
+        Image(uiImage: uiImage)
+      } else {
+        Rectangle()
+      }
+    }
+  }
+}
+class RemoteImageObject : ObservableObject {
+  let url : URL
+  var task : URLSessionDownloadTask!
+  @Published var image : UIImage?
+  
+  init (url: URL) {
+    self.url = url
+    
+    let task = URLSession.shared.downloadTask(with: url) { url, _, _ in
+      guard let url = url else {
+        return
+      }
+      self.image = UIImage(contentsOfFile: url.path)
+    }
+    task.resume()
+    
+    self.task = task
+  }
+  
+}
+
+
 struct PromoView: View {
     let design: PromoDesign
     var body: some View {
@@ -17,7 +57,7 @@ struct PromoView: View {
           ProgressView()
         }.scaledToFit().padding()
       } else {
-        EmptyView()
+        RemoteImage(url: design.imageURL)
       }
     }
 }
