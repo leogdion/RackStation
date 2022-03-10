@@ -10,11 +10,15 @@ import SwiftUI
 struct PromoView: View {
     let design: PromoDesign
     var body: some View {
+      if #available(iOS 15.0, *) {
         AsyncImage(url: design.imageURL) { image in
-            image.resizable()
+          image.resizable()
         } placeholder: {
-            ProgressView()
+          ProgressView()
         }.scaledToFit().padding()
+      } else {
+        EmptyView()
+      }
     }
 }
 

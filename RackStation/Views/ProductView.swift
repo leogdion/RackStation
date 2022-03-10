@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct ProductView: View {
+  static let formatter : NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.maximumFractionDigits = 2
+    formatter.minimumFractionDigits = 2
+    formatter.currencyCode = "USD"
+    formatter.numberStyle = .currency
+    return formatter
+  }()
+
     let design: ProductDesign
     var body: some View {
         VStack {
             ZStack(alignment: .bottomTrailing) {
+              if #available(iOS 15.0, *) {
                 AsyncImage(url: design.imageURL) { image in
-                    image.resizable()
+                  image.resizable()
                 } placeholder: {
-                    ProgressView()
+                  ProgressView()
                 }.scaledToFit().frame(width: 150, height: 150)
+              } else {
+                EmptyView()
+              }
                 Button {} label: {
                     ZStack {
                         Circle().foregroundColor(.blue)
@@ -27,7 +40,7 @@ struct ProductView: View {
                 .frame(width: 64.0, height: 64.0, alignment: .bottomTrailing)
             }
             VStack(alignment: .leading, spacing: 8.0) {
-                Text("$\(design.price.formatted())").font(.title2).fontWeight(.black).multilineTextAlignment(.leading)
+              Text("\(Self.formatter.string(from:  NSDecimalNumber(decimal: design.price))!)").font(.title2).fontWeight(.black).multilineTextAlignment(.leading)
                 Text(design.labelText).lineLimit(2).multilineTextAlignment(.leading)
             }
         }
