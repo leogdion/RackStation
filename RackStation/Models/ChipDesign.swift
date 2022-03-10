@@ -1,6 +1,6 @@
 import Foundation
 
-struct ChipDesign: Codable, Identifiable {
+struct ChipDesign: Codable, Identifiable, Randomizable {
     internal init(id: UUID = .init(), iconName: String, labelText: String) {
         self.id = id
         self.iconName = iconName
@@ -18,4 +18,9 @@ struct ChipDesign: Codable, Identifiable {
     let id: UUID
     let iconName: String
     let labelText: String
+  
+  func randomize() -> ChipDesign {
+    let other = Self.random()
+    return .init(id: self.id, iconName: other.iconName, labelText: other.labelText)
+  }
 }

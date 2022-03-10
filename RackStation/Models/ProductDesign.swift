@@ -1,6 +1,6 @@
 import Foundation
 
-struct ProductDesign: Codable, Identifiable {
+struct ProductDesign: Codable, Identifiable, Randomizable {
     static let defaultURL = URL(string: "https://picsum.photos/300")!
     static let productNames = """
     Alize Sunset
@@ -854,4 +854,9 @@ struct ProductDesign: Codable, Identifiable {
         let price = Decimal(Double(Int.random(in: 100 ..< 10000)) / 100.0)
         return Self(price: price, labelText: Self.productNames.randomElement()!)
     }
+  
+  func randomize() -> ProductDesign {
+    let other = Self.random()
+    return Self.init(id: self.id, price: other.price, labelText: other.labelText, imageURL: other.imageURL)
+  }
 }

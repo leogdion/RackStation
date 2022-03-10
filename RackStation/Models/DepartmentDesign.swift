@@ -1,6 +1,6 @@
 import Foundation
 
-struct DepartmentDesign: Codable, Identifiable {
+struct DepartmentDesign: Codable, Identifiable, Randomizable {
     internal init(id: UUID = .init(), iconName: String, labelText: String) {
         self.id = id
         self.iconName = iconName
@@ -16,12 +16,9 @@ struct DepartmentDesign: Codable, Identifiable {
         let symbol = Symbols.random()
         return Self(iconName: symbol.rawValue, labelText: department.rawValue)
     }
-}
-
-struct DepartmentCollectionDesign: Codable {
-    let departments: [DepartmentDesign]
-
-    static func random(withCount count: Int = .random(in: 5 ... 9)) -> DepartmentCollectionDesign {
-        .init(departments: .init(factory: DepartmentDesign.random, count: count))
-    }
+  
+  func randomize() -> DepartmentDesign {
+    let other = Self.random()
+    return Self.init(id: self.id, iconName: other.iconName, labelText: other.labelText)
+  }
 }
