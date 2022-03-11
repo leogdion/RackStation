@@ -8,23 +8,26 @@
 import SwiftUI
 
 
-struct RemoteImage : View {
-  @StateObject var imageObject : RemoteImageObject
+struct RemoteImage<PlaceHolderView : View> : View {
   
-  init (url : URL) {
+  @StateObject var imageObject : RemoteImageObject
+  let placeholder : () -> PlaceHolderView
+  init (url : URL,@ViewBuilder placeholder: @escaping () -> PlaceHolderView) {
     self._imageObject = StateObject(wrappedValue: .init(url: url))
+    self.placeholder = placeholder
   }
   
   var body: some View {
     Group {
       if let uiImage = imageObject.image {
-        Image(uiImage: uiImage)
+        Image(uiImage: uiImage).resizable()
       } else {
-        Rectangle()
+        placeholder()
       }
     }
   }
 }
+
 class RemoteImageObject : ObservableObject {
   let url : URL
   var task : URLSessionDownloadTask!
@@ -37,7 +40,10 @@ class RemoteImageObject : ObservableObject {
       guard let url = url else {
         return
       }
-      self.image = UIImage(contentsOfFile: url.path)
+      DispatchQueue.main.async {
+        self.image = UIImage(contentsOfFile: url.path)
+      }
+      
     }
     task.resume()
     
@@ -46,20 +52,37 @@ class RemoteImageObject : ObservableObject {
   
 }
 
+struct CompatiableRemoteImage<PlaceHolderView : View> : View {
+  internal init(url: URL, @ViewBuilder placeholder: @escaping () -> PlaceHolderView) {
+    self.url = url
+    self.placeholder = placeholder
+  }
+  
+  let url : URL
+  let placeholder : () -> PlaceHolderView
+  var body: some View {
+    Group {
+      if #available(iOS 15.0, *) {
+        AsyncImage(url: self.url, content: { image in
+          image.resizable()
+        }, placeholder: self.placeholder)
+      } else {
+        RemoteImage(url: url, placeholder: self.placeholder)
+      }
+    }
+  }
+}
+
 
 struct PromoView: View {
     let design: PromoDesign
-    var body: some View {
-      if #available(iOS 15.0, *) {
-        AsyncImage(url: design.imageURL) { image in
-          image.resizable()
-        } placeholder: {
-          ProgressView()
-        }.scaledToFit().padding()
-      } else {
-        RemoteImage(url: design.imageURL)
-      }
-    }
+
+  var body: some View {
+    CompatiableRemoteImage(url: design.imageURL) {
+      ProgressView()
+    }.scaledToFit().padding()
+          
+  }
 }
 
 struct PromoView_Previews: PreviewProvider {
