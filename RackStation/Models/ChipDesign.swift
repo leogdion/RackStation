@@ -18,9 +18,9 @@ struct ChipDesign: Codable, Identifiable, Randomizable {
     let id: UUID
     let iconName: String
     let labelText: String
-  
-  func randomize() -> ChipDesign {
-    let other = Self.random()
-    return .init(id: self.id, iconName: other.iconName, labelText: other.labelText)
-  }
+
+    func randomize() -> ChipDesign {
+        let other = Self.random()
+        return .init(id: id, iconName: other.iconName, labelText: other.labelText)
+    }
 }

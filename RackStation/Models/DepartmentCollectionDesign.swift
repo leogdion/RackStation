@@ -7,15 +7,14 @@
 
 import Foundation
 
-
 struct DepartmentCollectionDesign: Codable, Randomizable {
     let departments: [DepartmentDesign]
 
     static func random(withCount count: Int = .random(in: 5 ... 9)) -> DepartmentCollectionDesign {
         .init(departments: .init(factory: DepartmentDesign.random, count: count))
     }
-  
-  func randomize() -> DepartmentCollectionDesign {
-    return .init(departments: self.departments.randomize())
-  }
+
+    func randomize() -> DepartmentCollectionDesign {
+        .init(departments: departments.randomize())
+    }
 }

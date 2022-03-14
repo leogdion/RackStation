@@ -8,13 +8,13 @@
 import Foundation
 
 protocol Randomizable {
-  func randomize () -> Self
+    func randomize() -> Self
 }
 
-extension Array where Element : Randomizable {
-  func randomize () -> Self {
-    self.map{
-      $0.randomize()
+extension Array where Element: Randomizable {
+    func randomize() -> Self {
+        map {
+            $0.randomize()
+        }
     }
-  }
 }

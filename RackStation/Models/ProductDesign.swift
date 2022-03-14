@@ -854,9 +854,9 @@ struct ProductDesign: Codable, Identifiable, Randomizable {
         let price = Decimal(Double(Int.random(in: 100 ..< 10000)) / 100.0)
         return Self(price: price, labelText: Self.productNames.randomElement()!)
     }
-  
-  func randomize() -> ProductDesign {
-    let other = Self.random()
-    return Self.init(id: self.id, price: other.price, labelText: other.labelText, imageURL: other.imageURL)
-  }
+
+    func randomize() -> ProductDesign {
+        let other = Self.random()
+        return Self(id: id, price: other.price, labelText: other.labelText, imageURL: other.imageURL)
+    }
 }

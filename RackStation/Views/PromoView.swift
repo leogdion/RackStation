@@ -9,10 +9,9 @@ import SwiftUI
 
 struct PromoView: View {
     let design: PromoDesign
+
     var body: some View {
-        AsyncImage(url: design.imageURL) { image in
-            image.resizable()
-        } placeholder: {
+        RemoteAsyncImage(url: design.imageURL) {
             ProgressView()
         }.scaledToFit().padding()
     }

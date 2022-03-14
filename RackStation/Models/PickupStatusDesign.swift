@@ -15,11 +15,11 @@ struct PickupStatusDesign: Codable, Randomizable {
         case pickup = "Pickup at"
         case deliver = "Deliver from"
     }
-  
-  func randomize() -> PickupStatusDesign {
-    let other = Self.random()
-    return Self.init(locationName: other.locationName, status: other.status, date: other.date)
-  }
+
+    func randomize() -> PickupStatusDesign {
+        let other = Self.random()
+        return Self(locationName: other.locationName, status: other.status, date: other.date)
+    }
 
     let status: Status
     let date: Date
