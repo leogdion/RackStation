@@ -14,9 +14,9 @@ struct PromoDesign: Codable, Identifiable, Randomizable {
     static func random() -> PromoDesign {
         self.init(imageURL: defaultURL)
     }
-  
-  func randomize() -> PromoDesign {
-    let other = Self.random()
-    return Self.init(id: self.id, imageURL: other.imageURL)
-  }
+
+    func randomize() -> PromoDesign {
+        let other = Self.random()
+        return Self(id: id, imageURL: other.imageURL)
+    }
 }

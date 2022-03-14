@@ -16,9 +16,9 @@ struct DepartmentDesign: Codable, Identifiable, Randomizable {
         let symbol = Symbols.random()
         return Self(iconName: symbol.rawValue, labelText: department.rawValue)
     }
-  
-  func randomize() -> DepartmentDesign {
-    let other = Self.random()
-    return Self.init(id: self.id, iconName: other.iconName, labelText: other.labelText)
-  }
+
+    func randomize() -> DepartmentDesign {
+        let other = Self.random()
+        return Self(id: id, iconName: other.iconName, labelText: other.labelText)
+    }
 }

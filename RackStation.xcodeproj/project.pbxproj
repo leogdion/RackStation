@@ -17,6 +17,9 @@
 		B3798B9D27CFC957001EB0DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */; };
 		B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BAD27CFD68E001EB0DC /* HomeView.swift */; };
 		B3798BB227CFDFA1001EB0DC /* HomeViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */; };
+		B38ACE1927DF8FCB00F4B66C /* RemoteAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ACE1627DF8FCB00F4B66C /* RemoteAsyncImage.swift */; };
+		B38ACE1A27DF8FCB00F4B66C /* RemoteImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ACE1727DF8FCB00F4B66C /* RemoteImageObject.swift */; };
+		B38ACE1B27DF8FCB00F4B66C /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38ACE1827DF8FCB00F4B66C /* RemoteImage.swift */; };
 		B3AA9EC627D7B7C40006A155 /* DepartmentCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */; };
 		B3AA9EC827D806320006A155 /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC727D806320006A155 /* DepartmentView.swift */; };
 		B3AA9ECA27D80BB60006A155 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA9EC927D80BB60006A155 /* PromoView.swift */; };
@@ -49,6 +52,9 @@
 		B3798B9C27CFC957001EB0DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3798BAD27CFD68E001EB0DC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B3798BB127CFDFA1001EB0DC /* HomeViewDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewDesign.swift; sourceTree = "<group>"; };
+		B38ACE1627DF8FCB00F4B66C /* RemoteAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAsyncImage.swift; sourceTree = "<group>"; };
+		B38ACE1727DF8FCB00F4B66C /* RemoteImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageObject.swift; sourceTree = "<group>"; };
+		B38ACE1827DF8FCB00F4B66C /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		B3AA9EC527D7B7C40006A155 /* DepartmentCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionView.swift; sourceTree = "<group>"; };
 		B3AA9EC727D806320006A155 /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
 		B3AA9EC927D80BB60006A155 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 		B3798B9427CFC952001EB0DC /* RackStation */ = {
 			isa = PBXGroup;
 			children = (
+				B38ACE1627DF8FCB00F4B66C /* RemoteAsyncImage.swift */,
+				B38ACE1827DF8FCB00F4B66C /* RemoteImage.swift */,
+				B38ACE1727DF8FCB00F4B66C /* RemoteImageObject.swift */,
 				B3798B9927CFC957001EB0DC /* Assets.xcassets */,
 				B3AA9EE227D80EC80006A155 /* Models */,
 				B3AA9EE127D80EB60006A155 /* Views */,
@@ -233,6 +242,7 @@
 				B3AA9EC827D806320006A155 /* DepartmentView.swift in Sources */,
 				B3AA9EDB27D80DCF0006A155 /* Decoder.swift in Sources */,
 				B3AA9EC627D7B7C40006A155 /* DepartmentCollectionView.swift in Sources */,
+				B38ACE1B27DF8FCB00F4B66C /* RemoteImage.swift in Sources */,
 				B3AA9EDF27D80DCF0006A155 /* RootDesignable.swift in Sources */,
 				B3B762AE27D69C3F005F8080 /* ProductView.swift in Sources */,
 				B3798BB027CFD68E001EB0DC /* HomeView.swift in Sources */,
@@ -249,8 +259,10 @@
 				B3120D4327D16CE7005601FA /* PickupStatusView.swift in Sources */,
 				B360DC6027D9322800D21557 /* DepartmentCollectionDesign.swift in Sources */,
 				B3798B9627CFC952001EB0DC /* RackStationApp.swift in Sources */,
+				B38ACE1A27DF8FCB00F4B66C /* RemoteImageObject.swift in Sources */,
 				B3AA9ED927D80DCF0006A155 /* DepartmentDesign.swift in Sources */,
 				B3120D4127D16564005601FA /* ProductCollectionDesign.swift in Sources */,
+				B38ACE1927DF8FCB00F4B66C /* RemoteAsyncImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

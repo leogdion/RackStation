@@ -11,7 +11,7 @@ struct HomeDesignItem: Identifiable {
 }
 
 extension HomeDesignItem {
-  func randomized () -> HomeDesignItem {
-    HomeDesignItem(design: self.design.randomized(), id: self.id)
-  }
+    func randomized() -> HomeDesignItem {
+        HomeDesignItem(design: design.randomized(), id: id)
+    }
 }

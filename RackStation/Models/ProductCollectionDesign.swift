@@ -10,8 +10,8 @@ struct ProductCollectionDesign: Codable, Randomizable {
     static func random(headerText: String, withCount count: Int = .random(in: 5 ... 9)) -> ProductCollectionDesign {
         .init(headerText: headerText, products: .init(factory: ProductDesign.random, count: count))
     }
-  
-  func randomize() -> ProductCollectionDesign {
-    return .init(headerText: self.headerText, products: self.products.randomize())
-  }
+
+    func randomize() -> ProductCollectionDesign {
+        .init(headerText: headerText, products: products.randomize())
+    }
 }

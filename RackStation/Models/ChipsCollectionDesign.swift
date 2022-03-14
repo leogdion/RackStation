@@ -1,8 +1,8 @@
 struct ChipsCollectionDesign: Codable, Randomizable {
-  func randomize() -> ChipsCollectionDesign {
-    return Self.init(chips: self.chips.randomize())
-  }
-  
+    func randomize() -> ChipsCollectionDesign {
+        Self(chips: chips.randomize())
+    }
+
     let chips: [ChipDesign]
 
     static func random(withCount count: Int = .random(in: 5 ... 9)) -> ChipsCollectionDesign {
